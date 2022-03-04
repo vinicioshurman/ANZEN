@@ -1,7 +1,7 @@
 <?php
-//página que o usuário vai entrar quando logar 
+// Página que o usuário vai entrar quando fizer login
 session_start();
-include('verifica_login.php');
+include('index.php');
 ?>
 
 <h2>Olá, <?php echo $_SESSION['nome'];?></h2>
