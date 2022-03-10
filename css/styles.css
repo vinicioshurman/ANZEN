@@ -1,0 +1,68 @@
+/* Remover configurações padrões */
+*:active,
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+:root {
+    --verde-principal: #399c7f;
+    --verde-hover:  hsl(162, 46%, 38%);
+    --cinza-principal: #ebebeb; 
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  margin:0;
+  padding:0;
+}
+
+/* Navbar Home */
+.btnUnderline {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.2rem;
+  margin-right: 20px;
+}
+
+.btnUnderline:hover{
+    background-color: var(--cinza-principal);
+}
+
+.btnVerde {
+  color: #fff;
+  background-color: var(--verde-principal);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.btnVerde:hover {
+  color: #fff;
+  background-color: var(--verde-hover);
+}
+
+/* Imagens de background da página home */ 
+.bg-gradiente1 {
+    position: absolute;
+    right: -40%;
+    top: -10%;
+    max-width: 70%;
+    min-width: 1000px;
+    height: auto;
+    width: auto;
+    transform: rotate(23.5deg);
+}
+.bg-gradiente2 {
+    position: absolute;
+    left: -10%;
+    top: 100%;
+    max-width: 135%;
+    min-width: 1500px;
+    height: auto;
+    width: auto;
+    transform: rotate(23.5deg);
+}
