@@ -24,7 +24,7 @@ session_start();
   ?>
 
 
-  <form action="logica/login.php" method="post">
+  <form action="../logica/login.php" method="post">
     <label for="email">Email</label><br>
     <input type="text" id="email" name="email"><br>
     
@@ -32,7 +32,7 @@ session_start();
     <input type="text" id="senha" name="senha" ><br><br>
     
     <input type="submit" value="Entrar"><br>
-    <a href="logica/login.php">Cadastrar</a>
+    <a href="../logica/login.php">Cadastrar</a>
   </form>
 
 </body>

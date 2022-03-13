@@ -5,7 +5,7 @@
 session_start();
 
 if(!$_SESSION['email']) {
-	header('Location: pg_home.php');
+	header('Location: ./php/paginas/pg_home.php');
 	exit();
 }
 ?>

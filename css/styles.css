@@ -51,7 +51,7 @@ body {
     right: -40%;
     top: -10%;
     max-width: 70%;
-    min-width: 1000px;
+    min-width: 1100px;
     height: auto;
     width: auto;
     transform: rotate(23.5deg);
@@ -61,8 +61,98 @@ body {
     left: -10%;
     top: 100%;
     max-width: 135%;
-    min-width: 1500px;
+    min-width: 1000px;
     height: auto;
     width: auto;
     transform: rotate(23.5deg);
 }
+    /* Mobile */
+    @media only screen and (max-width: 1200px) {
+      .bg-gradiente1 {
+        position: absolute;
+        right: -70%;
+        top: -10%;
+        max-width: 70%;
+        min-width: 1000px;
+        height: auto;
+        width: auto;
+        transform: rotate(23.5deg);
+    }
+    .bg-gradiente2 {
+        position: absolute;
+        left: -30%;
+        top: 85%;
+        max-width: 135%;
+        min-width: 2500px;
+        height: auto;
+        width: auto;
+        transform: rotate(23.5deg);
+    }
+    } 
+    @media only screen and (max-width: 992px) {
+      .bg-gradiente1 {
+        position: absolute;
+        right: -100%;
+        top: -10%;
+        max-width: 70%;
+        min-width: 1100px;
+        height: auto;
+        width: auto;
+        transform: rotate(23.5deg);
+    }
+    .bg-gradiente2 {
+        position: absolute;
+        left: -60%;
+        top: 100%;
+        max-width: 135%;
+        min-width: 1500px;
+        height: auto;
+        width: auto;
+        transform: rotate(23.5deg);
+    }
+    } 
+    @media only screen and (max-width: 768px) {
+      .bg-gradiente1 {
+        position: absolute;
+        right: -110%;
+        top: -10%;
+        max-width: 70%;
+        min-width: 950px;
+        height: auto;
+        width: auto;
+        transform: rotate(23.5deg);
+    }
+    .bg-gradiente2 {
+        position: absolute;
+        left: -60%;
+        top: 100%;
+        max-width: 135%;
+        min-width: 1500px;
+        height: auto;
+        width: auto;
+        transform: rotate(23.5deg);
+    }
+    } 
+    @media only screen and (max-width: 576px) {
+      .bg-gradiente1 {
+        position: absolute;
+        right: -130%;
+        top: 10%;
+        max-width: 70%;
+        min-width: 750px;
+        height: auto;
+        width: auto;
+        transform: rotate(23.5deg);
+    }
+    .bg-gradiente2 {
+        position: absolute;
+        left: -75%;
+        top: 100%;
+        max-width: 135%;
+        min-width: 2000px;
+        height: auto;
+        width: auto;
+        transform: rotate(23.5deg);
+    }
+    } 
+
