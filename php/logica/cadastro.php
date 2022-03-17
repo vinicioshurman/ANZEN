@@ -2,12 +2,12 @@
 session_start();
 include("conexaoBanco.php");
 
-$nome = mysqli_real_escape_string($conexao, trim($_POST['nome']));
-$email = mysqli_real_escape_string($conexao, trim($_POST['email']));
-$senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha'])));
+$nome = mysqli_real_escape_string($conexaoBanco, trim($_POST['nome']));
+$email = mysqli_real_escape_string($conexaoBanco, trim($_POST['email']));
+$senha = mysqli_real_escape_string($conexaoBanco, trim(md5($_POST['senha'])));
 
-$sql = "select count(*) as total from usuario where usuario = '$email'";
-$resultado = mysqli_query($conexao, $sql);
+$sql = "SELECT email FROM usuario WHERE email = '$email'";
+$resultado = mysqli_query($conexaoBanco, $sql);
 $linha = mysqli_fetch_assoc($resultado);
 
 // Verifica se o usuário existe 
@@ -21,11 +21,11 @@ if($linha['total'] == 1) {
 $sql = "INSERT INTO usuario (nome, email, senha) VALUES ('$nome', '$email', '$senha', NOW())";
 
 // Verifica se tudo foi cadastrado corretamente
-if($conexao->query($sql) === TRUE) {
+if($conexaoBanco->query($sql) === TRUE) {
 	$_SESSION['status_cadastro'] = true;
 }
 
-$conexao->close();
+$conexaoBanco->close();
 
 header('Location: cadastro.php');
 exit;

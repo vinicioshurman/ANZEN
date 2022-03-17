@@ -3,7 +3,7 @@
 // Essas constantes servem para fazer uma conexão com o banco 
 define('HOST', '127.0.0.1'); // Coloca aqui seu host e seu servidor, geralmente são esses, mas se os seus forem diferentes vc muda
 define('USUARIO', 'root');
-define('SENHA', 'anzen123');
+define('SENHA', 'HORTETEC_115');
 define('DB', 'anzen'); // Aqui faz a conexão com o banco
 
 $conexaoBanco = mysqli_connect(HOST, USUARIO, SENHA, DB) or die ('Não foi possível conectar ao servidor.');

@@ -18,7 +18,7 @@ session_start();
     header('location: painel.php');
   }
   ?>
-  <form action="cadastrar.php" method="post">
+  <form action="../logica/cadastro.php" method="post">
     <label for="email">Email</label><br>
     <input type="text" id="email" name="email" value="email"><br>
     

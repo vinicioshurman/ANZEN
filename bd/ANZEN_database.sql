@@ -21,10 +21,11 @@ DESC fluxoGeral;
 DESC categoria;
 
 CREATE TABLE usuario(
-	id_usuario INT(5) NOT NULL PRIMARY KEY,
+	id_usuario INT(5) NOT NULL AUTO_INCREMENT,
 	nome VARCHAR(40) NOT NULL,
 	email VARCHAR(40) NOT NULL,
     senha VARCHAR(40) NOT NULL
+	PRIMARY KEY (id_usuario)
 );
 
 CREATE TABLE cartao(
