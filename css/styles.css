@@ -72,6 +72,8 @@ line-height: 29px;
 }
 
 /* Pagina de login e cadastro */
+
+
 .boxLC{
   width: 510px;
   height: 416px;
@@ -88,13 +90,24 @@ line-height: 29px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-font-size: 24px;
-line-height: 29px;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.LC {
+  width: 410px;
+  height: 316px;
+  margin: auto;
+
+  background: red;
 }
 
 .input input{
-  margin: auto;
-  width: 384px;
+  color: #A3A3A3;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 40px;
+  width: 100%;
   height: 50px;
   background: #EBEBEB;
   border: 0px;
