@@ -48,6 +48,8 @@ body {
   background-color: var(--verde-hover);
 }
 
+
+
 /* Slogam, texto da pagina HOME */ 
 .slogan{
     position: absolute;
@@ -73,39 +75,41 @@ line-height: 29px;
 
 /* Pagina de login e cadastro */
 
-
 .boxLC{
   width: 510px;
   height: 416px;
   margin: auto;
   margin-top: 15%;
-  background: var(--verde-principal);
-  box-shadow: 0px 0px 42px 10px rgba(0, 0, 0, 0.02);
+  background: #fff;
+  box-shadow: 0px 0px 42px 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
 }
 
 .boxLC h1{
-  color: #fff;
+  color: #000;
   padding: 50px 0 40px 0;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 29px;
 }
 
 .LC {
   width: 410px;
-  height: 316px;
+  height: 100px;
   margin: auto;
+}
 
-  background: red;
+.LC .btnVerde {
+  margin-left: 165px;
 }
 
 .input input{
-  color: #A3A3A3;
+  color: #000;
   font-weight: 700;
   font-size: 20px;
+  padding-left: 25px;
   margin-bottom: 40px;
   width: 100%;
   height: 50px;
