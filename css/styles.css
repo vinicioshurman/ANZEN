@@ -74,17 +74,37 @@ line-height: 29px;
 
 /* Pagina de login e cadastro */
 
-.boxLC{
+.boxL{
   width: 510px;
-  height: 416px;
   margin: auto;
+  height: 400px;
   margin-top: 15%;
   background: #fff;
   box-shadow: 0px 0px 42px 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
 }
 
-.boxLC h1{
+.boxC{
+  width: 510px;
+  margin: auto;
+  height: 500px;
+  margin-top: 15%;
+  background: #fff;
+  box-shadow: 0px 0px 42px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.boxL h1{
+  color: #000;
+  padding: 50px 0 40px 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 29px;
+}
+
+.boxC h1{
   color: #000;
   padding: 50px 0 40px 0;
   text-align: center;
