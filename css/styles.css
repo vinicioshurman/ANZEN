@@ -1,4 +1,4 @@
-/* Remover configurações padrões */
+/* Cor recorrente */
 :root {
     --verde-principal: #399c7f;
     --verde-hover:  hsl(162, 46%, 38%);
@@ -49,7 +49,7 @@ body {
 
 
 
-/* Slogam, texto da pagina HOME */ 
+/* Slogan, texto da pagina HOME */ 
 .slogan{
     position: absolute;
     top: 250px;
