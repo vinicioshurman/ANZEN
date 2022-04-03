@@ -1,8 +1,12 @@
-/* Cor recorrente */
+/* Variáveis */
 :root {
-    --verde-principal: #399c7f;
-    --verde-hover:  hsl(162, 46%, 38%);
-    --cinza-principal: #ebebeb; 
+  --verde-principal: rgb(57, 156, 127);
+  --verde-hover: rgb(52, 141, 115);
+  --verde-sombra: 0px 0px 30px 15px rgba(57, 156, 127, 0.15);
+  --cinza-principal: #ebebeb;
+  --sombra-fraca: 0px 0px 45px 10px rgba(0, 0, 0, 0.05);
+  --sombra-media: 0px 0px 25px 5px rgba(0, 0, 0, 0.126);
+  --sombra-forte: 0px 0px 25px 5px rgba(0, 0, 0, 0.226);
 }
 
 body {
@@ -10,106 +14,101 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   height: 100%;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-/* Navbar Home */
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+
+/* Navbar */
 .navbar {
   z-index: 5;
 }
-.btnUnderline {
-  color: #000;
-  font-size: 1.2rem;
+
+.logo:hover {
+  background-color: var(--cinza-principal);
+  box-shadow: var(--sombra-media);
+}
+
+.button {
   font-weight: bold;
-  text-decoration-line: underline;
-  text-decoration-thickness: 0.2rem;
-  margin-right: 20px;
+  font-size: 1.2rem;
+  padding: 6px 20px;
+  margin: 0 15px;
+  border: none;
+  border-radius: 5px;
 }
 
-.btnUnderline:hover{
-    background-color: var(--cinza-principal);
+.button-color-white {
+  background-color: #fff;
 }
 
-.btnVerde {
+.button-color-green {
   color: #fff;
   background-color: var(--verde-principal);
-  padding: 5px 20px;
-  border: 0;
-  border-radius: 5px;
-
-  font-size: 1.2rem;
-  font-weight: bold;
 }
-.btnVerde:hover {
+
+.button-color-white:hover {
+  background-color: var(--cinza-principal);
+  box-shadow: var(--sombra-media)
+}
+
+.button-color-green:hover {
   color: #fff;
   background-color: var(--verde-hover);
-  box-shadow: 0px 0px 25px 5px hsla(162, 62%, 53%, 0.226);
+  box-shadow: var(--verde-sombra)
 }
 
-
-
-/* Slogan, texto da pagina HOME */ 
-.slogan{
-    position: absolute;
-    top: 250px;
-    left: 250px;
-    font-family: "Montserrat", sans-serif;
-    color: #000;
-    width: 500px;
-    height: 500px;
+.underline {
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.2rem;
 }
 
-.slogan h1{
+/* Slogam, texto da pagina HOME */
+.slogan {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  width: 500px;
+  height: 500px;
+
+}
+
+.slogan h1 {
   font-weight: 700;
   font-size: 48px;
   line-height: 59px;
 }
 
-.slogan p{
-font-weight: 600;
-font-size: 24px;
-line-height: 29px;
+.slogan p {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
 }
 
 /* Pagina de login e cadastro */
 
-.boxL{
+
+.boxLC {
   width: 510px;
   margin: auto;
   height: 400px;
   margin-top: 15%;
   background: #fff;
-  box-shadow: 0px 0px 42px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--sombra-fraca);
   border-radius: 5px;
 }
 
-.boxC{
-  width: 510px;
-  margin: auto;
-  height: 500px;
-  margin-top: 15%;
-  background: #fff;
-  box-shadow: 0px 0px 42px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
-}
-
-.boxL h1{
+.boxLC h1 {
   color: #000;
   padding: 50px 0 40px 0;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 29px;
-}
-
-.boxC h1{
-  color: #000;
-  padding: 50px 0 40px 0;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
   font-size: 28px;
   line-height: 29px;
 }
@@ -124,7 +123,7 @@ line-height: 29px;
   margin-left: 165px;
 }
 
-.input input{
+.input input {
   color: #000;
   font-weight: 700;
   font-size: 20px;
@@ -132,121 +131,118 @@ line-height: 29px;
   margin-bottom: 40px;
   width: 100%;
   height: 50px;
-  background: #EBEBEB;
+  background: #ebebeb;
   border: 0px;
   border-radius: 5px;
 }
 
-
-
-/* Imagens de background da página home */ 
+/* Imagens de background da página home */
 .bg-gradiente1 {
+  position: absolute;
+  right: -40%;
+  top: -10%;
+  max-width: 70%;
+  min-width: 1100px;
+  height: auto;
+  width: auto;
+  transform: rotate(23.5deg);
+}
+.bg-gradiente2 {
+  position: absolute;
+  left: -10%;
+  top: 100%;
+  max-width: 135%;
+  min-width: 1000px;
+  height: auto;
+  width: auto;
+  transform: rotate(23.5deg);
+}
+/* Mobile */
+@media only screen and (max-width: 1200px) {
+  .bg-gradiente1 {
     position: absolute;
-    right: -40%;
+    right: -70%;
+    top: -10%;
+    max-width: 70%;
+    min-width: 1000px;
+    height: auto;
+    width: auto;
+    transform: rotate(23.5deg);
+  }
+  .bg-gradiente2 {
+    position: absolute;
+    left: -30%;
+    top: 85%;
+    max-width: 135%;
+    min-width: 2500px;
+    height: auto;
+    width: auto;
+    transform: rotate(23.5deg);
+  }
+}
+@media only screen and (max-width: 992px) {
+  .bg-gradiente1 {
+    position: absolute;
+    right: -100%;
     top: -10%;
     max-width: 70%;
     min-width: 1100px;
     height: auto;
     width: auto;
     transform: rotate(23.5deg);
-}
-.bg-gradiente2 {
+  }
+  .bg-gradiente2 {
     position: absolute;
-    left: -10%;
+    left: -60%;
     top: 100%;
     max-width: 135%;
-    min-width: 1000px;
+    min-width: 1500px;
     height: auto;
     width: auto;
     transform: rotate(23.5deg);
+  }
 }
-    /* Mobile */
-    @media only screen and (max-width: 1200px) {
-      .bg-gradiente1 {
-        position: absolute;
-        right: -70%;
-        top: -10%;
-        max-width: 70%;
-        min-width: 1000px;
-        height: auto;
-        width: auto;
-        transform: rotate(23.5deg);
-    }
-    .bg-gradiente2 {
-        position: absolute;
-        left: -30%;
-        top: 85%;
-        max-width: 135%;
-        min-width: 2500px;
-        height: auto;
-        width: auto;
-        transform: rotate(23.5deg);
-    }
-    } 
-    @media only screen and (max-width: 992px) {
-      .bg-gradiente1 {
-        position: absolute;
-        right: -100%;
-        top: -10%;
-        max-width: 70%;
-        min-width: 1100px;
-        height: auto;
-        width: auto;
-        transform: rotate(23.5deg);
-    }
-    .bg-gradiente2 {
-        position: absolute;
-        left: -60%;
-        top: 100%;
-        max-width: 135%;
-        min-width: 1500px;
-        height: auto;
-        width: auto;
-        transform: rotate(23.5deg);
-    }
-    } 
-    @media only screen and (max-width: 768px) {
-      .bg-gradiente1 {
-        position: absolute;
-        right: -110%;
-        top: -10%;
-        max-width: 70%;
-        min-width: 950px;
-        height: auto;
-        width: auto;
-        transform: rotate(23.5deg);
-    }
-    .bg-gradiente2 {
-        position: absolute;
-        left: -65%;
-        top: 100%;
-        max-width: 135%;
-        min-width: 2500px;
-        height: auto;
-        width: auto;
-        transform: rotate(23.5deg);
-    }
-    } 
-    @media only screen and (max-width: 576px) {
-      .bg-gradiente1 {
-        position: absolute;
-        right: -155%;
-        top: 0%;
-        max-width: 70%;
-        min-width: 750px;
-        height: auto;
-        width: auto;
-        transform: rotate(23.5deg);
-    }
-    .bg-gradiente2 {
-        position: absolute;
-        left: -70%;
-        top: 100%;
-        max-width: 135%;
-        min-width: 2000px;
-        height: auto;
-        width: auto;
-        transform: rotate(23.5deg);
-    }
-    } 
-
+@media only screen and (max-width: 768px) {
+  .bg-gradiente1 {
+    position: absolute;
+    right: -110%;
+    top: -10%;
+    max-width: 70%;
+    min-width: 950px;
+    height: auto;
+    width: auto;
+    transform: rotate(23.5deg);
+  }
+  .bg-gradiente2 {
+    position: absolute;
+    left: -65%;
+    top: 100%;
+    max-width: 135%;
+    min-width: 2500px;
+    height: auto;
+    width: auto;
+    transform: rotate(23.5deg);
+  }
+}
+@media only screen and (max-width: 576px) {
+  .bg-gradiente1 {
+    position: absolute;
+    right: -155%;
+    top: 0%;
+    max-width: 70%;
+    min-width: 750px;
+    height: auto;
+    width: auto;
+    transform: rotate(23.5deg);
+  }
+  .bg-gradiente2 {
+    position: absolute;
+    left: -70%;
+    top: 100%;
+    max-width: 135%;
+    min-width: 2000px;
+    height: auto;
+    width: auto;
+    transform: rotate(23.5deg);
+  }
+}
