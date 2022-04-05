@@ -2,7 +2,7 @@
 :root {
   --verde-principal: rgb(57, 156, 127);
   --verde-hover: rgb(52, 141, 115);
-  --verde-sombra: 0px 0px 30px 15px rgba(57, 156, 127, 0.15);
+  --sombra-verde: 0px 0px 30px 15px rgba(57, 156, 127, 0.15);
   --cinza-principal: #ebebeb;
   --sombra-fraca: 0px 0px 45px 10px rgba(0, 0, 0, 0.05);
   --sombra-media: 0px 0px 25px 5px rgba(0, 0, 0, 0.126);
@@ -60,7 +60,7 @@ h1 {
 .button-color-green:hover {
   color: #fff;
   background-color: var(--verde-hover);
-  box-shadow: var(--verde-sombra)
+  box-shadow: var(--sombra-verde)
 }
 
 .underline {
@@ -146,6 +146,8 @@ h1 {
   height: auto;
   width: auto;
   transform: rotate(23.5deg);
+  box-shadow: var(--sombra-fraca);
+  border-radius: 5px;
 }
 .bg-gradiente2 {
   position: absolute;
@@ -156,6 +158,8 @@ h1 {
   height: auto;
   width: auto;
   transform: rotate(23.5deg);
+  box-shadow: var(--sombra-fraca);
+  border-radius: 5px;
 }
 /* Mobile */
 @media only screen and (max-width: 1200px) {
