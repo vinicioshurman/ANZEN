@@ -1,1 +1,0 @@
-Na pasta "logica" ficam toda a parte que o usuário não consegue ver, todo o código que controla o site.

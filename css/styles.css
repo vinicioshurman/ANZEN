@@ -1,4 +1,3 @@
-/* Variáveis */
 :root {
   --verde-principal: rgb(57, 156, 127);
   --verde-hover: rgb(52, 141, 115);
@@ -23,230 +22,90 @@ h1 {
   font-weight: bold;
 }
 
-
-/* Navbar */
-.navbar {
-  z-index: 5;
-}
-
-.logo:hover {
-  background-color: var(--cinza-principal);
-  box-shadow: var(--sombra-media);
-}
-
-.button {
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 6px 20px;
-  margin: 0 15px;
-  border: none;
+.bg-gradiente1 {
+  position: absolute;
+  transform: rotate(23.5deg);
   border-radius: 5px;
+  height: 60vw;
+  top: 4vw;
+  right: -37vw;
 }
 
-.button-color-white {
-  background-color: #fff;
+.bg-gradiente2 {
+  position: absolute;
+  transform: rotate(23.5deg);
+  border-radius: 5px;
+  height: 60vw;
+  top: 55vw;
+  left: -5vw;
 }
 
-.button-color-green {
-  color: #fff;
-  background-color: var(--verde-principal);
-}
-
-.button-color-white:hover {
-  background-color: var(--cinza-principal);
-  box-shadow: var(--sombra-media)
-}
-
-.button-color-green:hover {
-  color: #fff;
-  background-color: var(--verde-hover);
-  box-shadow: var(--sombra-verde)
-}
-
-.underline {
-  text-decoration-line: underline;
-  text-decoration-thickness: 0.2rem;
-}
-
-/* Slogam, texto da pagina HOME */
 .slogan {
   position: absolute;
-  top: 250px;
-  left: 250px;
+  top: 16vw;
+  left: 14vw;
   font-family: "Montserrat", sans-serif;
   color: #000;
-  width: 500px;
-  height: 500px;
-
+  width: 25vw;
+  height: auto;
 }
 
 .slogan h1 {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 59px;
+  font-size: 2.5vw;
+  line-height: 3.125vw;
 }
 
 .slogan h2 {
   font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 1.25vw;
+  line-height: 1.5vw;
 }
 
-/* Pagina de login e cadastro */
-
-
-.boxLC {
-  width: 510px;
-  margin: auto;
-  height: 400px;
-  margin-top: 15%;
-  background: #fff;
-  box-shadow: var(--sombra-fraca);
-  border-radius: 5px;
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 9;
 }
 
-.boxLC h1 {
-  color: #000;
-  padding: 50px 0 40px 0;
-  text-align: center;
-  font-size: 28px;
-  line-height: 29px;
+.navbar .logo{
+    position: inherit;
+    top: 1vw;
+    left: 14vw;
 }
 
-.LC {
-  width: 410px;
-  height: 100px;
-  margin: auto;
+.navbar .nav-items {
+    position: inherit;
+    right: 14vw;
+    top: 1vw;
 }
 
-.LC .btnVerde {
-  margin-left: 165px;
+.btn {
+    font-size: 1vw;
+    font-weight: bold;
 }
 
-.input input {
-  color: #000;
-  font-weight: 700;
-  font-size: 20px;
-  padding-left: 25px;
-  margin-bottom: 40px;
-  width: 100%;
-  height: 50px;
-  background: #ebebeb;
-  border: 0px;
-  border-radius: 5px;
+.btn:hover {
+    box-shadow: var(--sombra-media);
 }
 
-/* Imagens de background da página home */
-.bg-gradiente1 {
-  position: absolute;
-  right: -40%;
-  top: -10%;
-  max-width: 70%;
-  min-width: 1100px;
-  height: auto;
-  width: auto;
-  transform: rotate(23.5deg);
-  box-shadow: var(--sombra-fraca);
-  border-radius: 5px;
+.btn-color-white:hover {
+    background-color: var(--cinza-principal);
 }
-.bg-gradiente2 {
-  position: absolute;
-  left: -10%;
-  top: 100%;
-  max-width: 135%;
-  min-width: 1000px;
-  height: auto;
-  width: auto;
-  transform: rotate(23.5deg);
-  box-shadow: var(--sombra-fraca);
-  border-radius: 5px;
+
+.btn-color-green {
+    color: #fff;
+    background-color: var(--verde-principal);
 }
-/* Mobile */
-@media only screen and (max-width: 1200px) {
-  .bg-gradiente1 {
-    position: absolute;
-    right: -70%;
-    top: -10%;
-    max-width: 70%;
-    min-width: 1000px;
-    height: auto;
-    width: auto;
-    transform: rotate(23.5deg);
-  }
-  .bg-gradiente2 {
-    position: absolute;
-    left: -30%;
-    top: 85%;
-    max-width: 135%;
-    min-width: 2500px;
-    height: auto;
-    width: auto;
-    transform: rotate(23.5deg);
-  }
+
+.btn-color-green:hover {
+    color: white;
+    background-color: var(--verde-hover);
 }
-@media only screen and (max-width: 992px) {
-  .bg-gradiente1 {
-    position: absolute;
-    right: -100%;
-    top: -10%;
-    max-width: 70%;
-    min-width: 1100px;
-    height: auto;
-    width: auto;
-    transform: rotate(23.5deg);
-  }
-  .bg-gradiente2 {
-    position: absolute;
-    left: -60%;
-    top: 100%;
-    max-width: 135%;
-    min-width: 1500px;
-    height: auto;
-    width: auto;
-    transform: rotate(23.5deg);
-  }
-}
-@media only screen and (max-width: 768px) {
-  .bg-gradiente1 {
-    position: absolute;
-    right: -110%;
-    top: -10%;
-    max-width: 70%;
-    min-width: 950px;
-    height: auto;
-    width: auto;
-    transform: rotate(23.5deg);
-  }
-  .bg-gradiente2 {
-    position: absolute;
-    left: -65%;
-    top: 100%;
-    max-width: 135%;
-    min-width: 2500px;
-    height: auto;
-    width: auto;
-    transform: rotate(23.5deg);
-  }
-}
-@media only screen and (max-width: 576px) {
-  .bg-gradiente1 {
-    position: absolute;
-    right: -155%;
-    top: 0%;
-    max-width: 70%;
-    min-width: 750px;
-    height: auto;
-    width: auto;
-    transform: rotate(23.5deg);
-  }
-  .bg-gradiente2 {
-    position: absolute;
-    left: -70%;
-    top: 100%;
-    max-width: 135%;
-    min-width: 2000px;
-    height: auto;
-    width: auto;
-    transform: rotate(23.5deg);
-  }
+
+.underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.2rem;
 }

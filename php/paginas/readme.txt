@@ -1,1 +1,0 @@
-Na pasta "paginas" ficam todas as paginas em html/php do site.
