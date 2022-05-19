@@ -40,6 +40,17 @@ h1 {
   left: -5vw;
 }
 
+.bg-SN1 {
+  top: 36vw;
+  left: -46vw;
+  width: 60vw;
+}
+
+.bg-SN2 {
+  top: 76vw;
+  left: 82vw;
+}
+
 .slogan {
   position: absolute;
   top: 12vw;
@@ -74,6 +85,68 @@ h1 {
   position: absolute;
   top: 130vw;
   left: 14vw;
+}
+
+.sobreNos {
+  position: absolute;
+  text-align: center;
+  width: 35vw;
+  left: 31.5vw;
+  height: 140vw;
+  padding: 10vw 1vw 10vw 1vw;
+}
+
+.logoSN {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  width: 14vw;
+}
+
+.anzen {
+  font-size: 3.9vw;
+  font-weight: 600;
+  margin: 0 0 25px 0;
+}
+
+.doAlemao {
+  font-size: 0.9vw;
+  font-weight: 500;
+  margin: 0;
+}
+
+.finanzen {
+  font-size: 3.1vw;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+}
+
+.doPortugues {
+  font-size: 0.9vw;
+  font-weight: 500;
+  margin: 0;
+}
+
+.financas {
+  font-size: 3.28vw;
+  font-weight: 400;
+  margin: 0 0 140px 0;
+}
+
+.situacaoProblema {
+  font-weight: 700;
+  margin-top: 420px;
+}
+
+.justificativa {
+  font-weight: 700;
+  margin-top: 180px;
+}
+
+.metodologia {
+  font-weight: 700;
+  margin-top: 420px;
 }
 
 .navbar .logo {
@@ -182,4 +255,18 @@ h1 {
     margin: 5px 0 20px 0;
     padding: 0 10px 0 10px;
     background-color: #ebebeb; 
+}
+
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.flex-box > div {
+  margin: 10px 2.83vw;
+  width: 6vw;
+  padding: auto;
+  font-size: 16px;
+  font-weight: 400;
 }
