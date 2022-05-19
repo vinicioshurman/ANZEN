@@ -40,6 +40,7 @@ h1 {
   top: 55vw;
   left: -5vw;
 }
+
 .navbar {
   position: absolute;
   top: 0;
@@ -59,6 +60,7 @@ h1 {
   top: 1vw;
   left: 14vw;
 }
+
 .navbar .nav-items {
   position: inherit;
   right: 14vw;
@@ -97,6 +99,7 @@ h1 {
   text-decoration-line: underline;
   text-decoration-thickness: 0.2rem;
 }
+
 /* - - - - - - - - - - */
 
 .slogan {
@@ -173,18 +176,18 @@ h1 {
 
 .login-cadastro h1 {
   text-align: center;
-  padding-bottom: 20px;  
+  padding-bottom: 20px;
 }
 
-.login-cadastro .field{
-    font-size: 12px;
-    width: 360px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    margin: 5px 0 20px 0;
-    padding: 0 10px 0 10px;
-    background-color: #ebebeb; 
+.login-cadastro .field {
+  font-size: 12px;
+  width: 360px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px 0 20px 0;
+  padding: 0 10px 0 10px;
+  background-color: #ebebeb;
 }
 
 /* Sobre Nós */
@@ -269,11 +272,48 @@ h1 {
   margin-top: 100px;
 }
 
-.flex-box > div {
+.flex-box>div {
   margin: 10px 2.83vw;
   width: 6vw;
   padding: auto;
   font-size: 16px;
   font-weight: 400;
 }
+
+/* - - - - - - - - - - */
+
+/* principal */
+.principal {
+  position: absolute;
+  right: 14vw;
+  left: 14vw;
+  background-color: dodgerblue;
+}
+
+.flex-box-main {
+  display: flex;
+  background-color: dodgerblue;
+  flex-wrap: wrap;
+  margin-top: 3.5vw;
+}
+
+.flex-box-main>div {
+  padding: auto;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: aqua;
+}
+
+.flex-group-1 {
+  margin-left: 8vw;
+}
+
+.flex-group-2 {
+  margin-left: 2vw;
+}
+
+.flex-group-3 {
+  margin-left: 2vw;
+}
+
 /* - - - - - - - - - - */
