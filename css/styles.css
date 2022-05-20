@@ -2,7 +2,7 @@
   --verde-principal: rgb(57, 156, 127);
   --verde-hover: rgb(52, 141, 115);
   --sombra-verde: 0px 0px 30px 15px rgba(57, 156, 127, 0.15);
-  --cinza-principal: #ebebeb;
+  --cinza-principal: rgba(235, 235, 235, 0.5);
   --sombra-fraca: 0px 0px 45px 10px rgba(0, 0, 0, 0.05);
   --sombra-media: 0px 0px 25px 5px rgba(0, 0, 0, 0.126);
   --sombra-forte: 0px 0px 25px 5px rgba(0, 0, 0, 0.226);
@@ -288,7 +288,7 @@ button {
 
 /* - - - - - - - - - - */
 
-/* principal */
+/* página principal > */
 .principal {
   position: absolute;
   right: 14vw;
@@ -334,7 +334,7 @@ button {
   width: 22vw;
 }
 
-.flex-group-0 h1{
+.valorGrande {
   font-family: "Ubuntu", sans-serif;
   font-size: 40px;
   font-weight: 600;
@@ -362,7 +362,7 @@ button {
 .flex-input-button {
   display: flex;
   align-items: stretch;
-  margin: 10px 0 10px 0;
+  margin: 10px 0 0 0;
   width: 100%;
 }
 
@@ -388,26 +388,45 @@ button {
 }
 
 .btn-adicionar {
-  width: 100%;
+  width: 14vw;
   margin: 0;
   height: 60px;
   font-size: 18px;
   padding: 0;
 }
-  /* table */
-  table {
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: var(--sombra-fraca);
-    border: none;
-  }
 
-  th {
-    background-color: #ebebeb;
-  }
+/* table > */
+table {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: var(--sombra-fraca);
+}
 
-  td {
-    padding: 5px 30px;
-    text-align: center;
-  }
-/* - - - - - - - - - - */
+td,
+th {
+  padding: 10px 30px;
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  background-color: var(--cinza-principal);
+}
+
+/* < table */
+
+.footer-principal{
+  text-align: center;
+}
+
+.totalGasto {
+  font-family: var(--ubuntu);
+  font-weight: 400;
+  margin: 30px;
+}
+
+
+.totalGasto strong{
+  font-family: var(--ubuntu);
+  font-weight: 600;
+}
+/* < página principal */
