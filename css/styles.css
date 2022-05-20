@@ -1,22 +1,22 @@
 :root {
-  --verde-principal: rgb(57, 156, 127);
-  --verde-hover: rgb(52, 141, 115);
-  --sombra-verde: 0px 0px 30px 15px rgba(57, 156, 127, 0.15);
   --cinza-principal: rgba(235, 235, 235, 0.5);
+  --montserrat: "Montserrat", sans-serif;
+  --sombra-verde: 0px 0px 30px 15px rgba(57, 156, 127, 0.15);
   --sombra-fraca: 0px 0px 45px 10px rgba(0, 0, 0, 0.05);
   --sombra-media: 0px 0px 25px 5px rgba(0, 0, 0, 0.126);
   --sombra-forte: 0px 0px 25px 5px rgba(0, 0, 0, 0.226);
   --ubuntu: "Ubuntu", sans-serif;
-  --montserrat: "Montserrat", sans-serif;
+  --verde-principal: rgb(57, 156, 127);
+  --verde-hover: rgb(52, 141, 115);
 }
-
+  
 body {
-  font-family: var(--ubuntu);
-  max-width: 100%;
-  overflow-x: hidden;
   height: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
+  font-family: var(--ubuntu);
+  overflow-x: hidden;
 }
 
 h1 {
@@ -31,20 +31,20 @@ button {
 /* Se repete em diferentes páginas */
 .bg-gradiente1 {
   position: absolute;
-  transform: rotate(23.5deg);
-  border-radius: 5px;
-  height: 60vw;
   top: 4vw;
   right: -37vw;
+  height: 60vw;
+  border-radius: 5px;
+  transform: rotate(23.5deg);
 }
 
 .bg-gradiente2 {
   position: absolute;
-  transform: rotate(23.5deg);
-  border-radius: 5px;
-  height: 60vw;
   top: 55vw;
   left: -5vw;
+  height: 60vw;
+  border-radius: 5px;
+  transform: rotate(23.5deg);
 }
 
 .navbar {
@@ -69,16 +69,16 @@ button {
 
 .navbar .nav-items {
   position: inherit;
-  right: 14vw;
   top: 1vw;
+  right: 14vw;
 }
 
 .btn {
+  margin: 0 15px;
+  border: none;
   font-size: 16px;
   font-weight: bold;
-  border: none;
   background-color: rgba(0, 0, 0, 0);
-  margin: 0 15px;
 }
 
 .btn:hover {
@@ -90,14 +90,14 @@ button {
 }
 
 .btn-color-green {
-  color: #fff;
-  background-color: var(--verde-principal);
   padding: 8px 35px;
   border-radius: 5px;
+  color: #fff;
+  background-color: var(--verde-principal);
 }
 
 .btn-color-green:hover {
-  color: white;
+  color: #fff;
   background-color: var(--verde-hover);
 }
 
@@ -110,23 +110,23 @@ button {
 
 .slogan {
   position: absolute;
+  height: auto;
+  width: 25vw;
   top: 12vw;
   left: 14vw;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--montserrat);
   color: #000;
-  width: 25vw;
-  height: auto;
 }
 
 .slogan h1 {
-  font-weight: 700;
   font-size: 2.5vw;
+  font-weight: 700;
   line-height: 3.125vw;
 }
 
 .slogan h2 {
-  font-weight: 600;
   font-size: 1.25vw;
+  font-weight: 600;
   line-height: 1.5vw;
 }
 
@@ -134,34 +134,34 @@ button {
 
 .missao {
   position: absolute;
-  left: 14vw;
-  top: 68vw;
-  font-size: 1vw;
-  text-align: center;
-  color: #fff;
   width: 18vw;
+  top: 68vw;
+  left: 14vw;
+  font-size: 1vw;
+  color: #fff;
+  text-align: center;
   text-shadow: 0px 0px 25px rgba(0, 0, 0, .4);
 }
 
 .visao {
   position: absolute;
-  left: 39.5vw;
-  top: 82vw;
-  font-size: 1vw;
-  text-align: center;
-  color: #fff;
   width: 20vw;
+  top: 82vw;
+  left: 39.5vw;
+  font-size: 1vw;
+  color: #fff;
+  text-align: center;
   text-shadow: 0px 0px 25px rgba(0, 0, 0, .4);
 }
 
 .valores {
   position: absolute;
-  right: 14vw;
-  top: 96vw;
-  font-size: 1vw;
-  text-align: center;
-  color: #fff;
   width: 18vw;
+  top: 96vw;
+  right: 14vw;
+  font-size: 1vw;
+  color: #fff;
+  text-align: center;
   text-shadow: 0px 0px 25px rgba(0, 0, 0, .4);
 }
 
@@ -169,8 +169,8 @@ button {
   width: 380px;
   margin: auto;
   margin-top: 12vw;
-  border-radius: 10px;
   padding: 40px 40px 60px 40px;
+  border-radius: 10px;
   box-shadow: var(--sombra-fraca);
 }
 
@@ -181,94 +181,94 @@ button {
 }
 
 .login-cadastro h1 {
-  text-align: center;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .login-cadastro .field {
-  font-size: 12px;
   width: 360px;
   height: 40px;
-  border: none;
-  border-radius: 10px;
   margin: 5px 0 20px 0;
   padding: 0 10px 0 10px;
-  background-color: #ebebeb;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--cinza-principal);
+  font-size: 12px;
 }
 
 /* Sobre Nós */
 .sobreNos {
   position: absolute;
-  text-align: center;
+  height: 130vw;
   width: 35vw;
   left: 31.5vw;
-  height: 130vw;
   padding: 10vw 1vw 10vw 1vw;
+  text-align: center;
 }
 
 .logoSN {
   display: block;
+  width: 14vw;
   margin-right: auto;
   margin-bottom: 50px;
   margin-left: auto;
-  width: 14vw;
 }
 
 .anzen {
+  margin: 0 0 2.6vw 0;
   font-size: 3.9vw;
   font-weight: 600;
-  margin: 0 0 2.6vw 0;
 }
 
 .doAlemao {
+  margin: 0;
   font-size: 0.9vw;
   font-weight: 500;
-  margin: 0;
 }
 
 .finanzen {
+  margin: 0 0 2vw 0;
   font-size: 3.1vw;
   font-weight: 400;
-  margin: 0 0 2vw 0;
 }
 
 .doPortugues {
+  margin: 0;
   font-size: 0.9vw;
   font-weight: 500;
-  margin: 0;
 }
 
 .financas {
+  margin: 0 0 10vw 0;
   font-size: 3.28vw;
   font-weight: 400;
-  margin: 0 0 10vw 0;
 }
 
 .situacaoProblema {
-  font-weight: 700;
   margin-top: 20vw;
+  font-weight: 700;
 }
 
 .justificativa {
-  font-weight: 700;
   margin-top: 8vw;
+  font-weight: 700;
 }
 
 .metodologia {
-  font-weight: 700;
   margin-top: 20vw;
+  font-weight: 700;
 }
 
 .bg-SN1 {
+  width: 60vw;
   top: 58vh;
   left: -46vw;
-  width: 60vw;
 }
 
 .bg-SN2 {
-  top: 112vh;
   height: 70vw;
   width: 60vw;
+  top: 112vh;
   left: 86vw;
 }
 
@@ -279,8 +279,8 @@ button {
 }
 
 .flex-box>div {
-  margin: 10px 2.83vw;
   width: 6vw;
+  margin: 10px 2.83vw;
   padding: auto;
   font-size: 16px;
   font-weight: 400;
@@ -298,12 +298,12 @@ button {
 .principal input {
   height: 30px;
   width: 80%;
+  margin: 10px 0 25px 0;
+  padding: 0 10px 0 10px;
   border: none;
   border-radius: 5px;
   outline: none;
-  margin: 10px 0 25px 0;
   background-color: var(--cinza-principal);
-  padding: 0 10px 0 10px;
   font-family: var(--ubuntu);
   font-weight: 600;
 }
@@ -335,7 +335,7 @@ button {
 }
 
 .valorGrande {
-  font-family: "Ubuntu", sans-serif;
+  font-family: var(--ubuntu);
   font-size: 40px;
   font-weight: 600;
   line-height: 6px;
@@ -362,19 +362,19 @@ button {
 .flex-input-button {
   display: flex;
   align-items: stretch;
-  margin: 10px 0 0 0;
   width: 100%;
+  margin: 10px 0 0 0;
 }
 
 .more-less {
   width: 30px;
   height: 30px;
   margin-right: 10px;
-  color: #fff;
-  background-color: var(--verde-principal);
   border: none;
-  outline: none;
   border-radius: 5px;
+  outline: none;
+  background-color: var(--verde-principal);
+  color: #fff;
 }
 
 .more-less:hover {
@@ -383,16 +383,16 @@ button {
 }
 
 .flex-group-3 input {
-  margin: 0;
   width: 90%;
+  margin: 0;
 }
 
 .btn-adicionar {
   width: 14vw;
-  margin: 0;
   height: 60px;
-  font-size: 18px;
+  margin: 0;
   padding: 0;
+  font-size: 18px;
 }
 
 /* table > */
@@ -414,19 +414,20 @@ tr:nth-child(odd) {
 
 /* < table */
 
-.footer-principal{
+.footer-principal {
   text-align: center;
 }
 
 .totalGasto {
+  margin: 30px;
   font-family: var(--ubuntu);
   font-weight: 400;
-  margin: 30px;
 }
 
 
-.totalGasto strong{
+.totalGasto strong {
   font-family: var(--ubuntu);
   font-weight: 600;
 }
+
 /* < página principal */
