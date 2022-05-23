@@ -22,7 +22,8 @@
             <thead>
                 <tr>
                     <th>Login</th>
-                    <th><a href="cadImovel.php">Novo</a></th>
+                    <th>Permissão</th>
+                    <th><a href="index.php?action=new">Novo</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -34,9 +35,10 @@
                         ?>
                         <tr>
                             <td><?php echo $usuario->getLogin(); ?></td>
+                            <td><?php echo $usuario->getPermissao(); ?></td>
                             <td>
-                                <a href="index.php?action=editar&id_usuario=<?php echo $usuario->getId();?>">Editar</a>
-                                <a href="index.php?action=excluir&id_usuario=<?php echo $usuario->getId();?>">Excluir</a>
+                                <a href="index.php?action=editar&id=<?php echo $usuario->getId();?>">Editar</a>
+                                <a href="index.php?action=excluir&id=<?php echo $usuario->getId();?>">Excluir</a>
                             </td>
                         </tr>
                         <?php
