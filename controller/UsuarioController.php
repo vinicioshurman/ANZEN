@@ -3,7 +3,6 @@ require_once './model/Usuario.php';
 
 class UsuarioController{
     public static function salvar(){
-       
         $usuario = new Usuario();
         $usuario->setLogin($_POST['login']);
         $usuario->setSenha($_POST['senha1']);
@@ -20,18 +19,17 @@ class UsuarioController{
         $usuarios = new Usuario;
         return $usuarios->listAll();
     }
-    public static function excluir($id)
-    {
+
+    public static function excluir($id){
         $usuario = new Usuario;
         $usuario = $usuario-> remove($id);
     }
-    public function logar()
-    {
+
+    public function logar(){
     $usuario= new Usuario();
     $usuario->setLogin($_POST['login']);
     $usuario->setSenha($_POST['senha']);
-
     return $usuario->logar();
-}
+    }
 }
 ?>
