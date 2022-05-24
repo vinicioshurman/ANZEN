@@ -131,7 +131,20 @@ class Usuario extends Banco{
         return $result;
     }
 
-
+ public function logar(){
+        $conexao= new Conexao();
+        $conn= $conexao->getConection();
+        $query= "SELECT * FROM usuario where login = :login and senha = : senha";
+        $stmt = $conn->prepare($query);
+        if($stmt->execute(array(':login'=> $this->login, ':senha'=> $this->senha))){
+         if($stmt->rowCount()>0){
+            $result = true; 
+        }else{
+            $result = false;
+        }
+    }
+    return $result;
+}
 
 }
 
