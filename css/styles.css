@@ -1,0 +1,440 @@
+:root {
+  --cinza-principal: rgba(235, 235, 235, 0.5);
+  --montserrat: "Montserrat", sans-serif;
+  --sombra-verde: 0px 0px 30px 15px rgba(57, 156, 127, 0.15);
+  --sombra-fraca: 0px 0px 45px 10px rgba(0, 0, 0, 0.05);
+  --sombra-media: 0px 0px 25px 5px rgba(0, 0, 0, 0.126);
+  --sombra-forte: 0px 0px 25px 5px rgba(0, 0, 0, 0.226);
+  --ubuntu: "Ubuntu", sans-serif;
+  --verde-principal: rgb(57, 156, 127);
+  --verde-hover: rgb(52, 141, 115);
+}
+
+body {
+  height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--ubuntu);
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: var(--montserrat);
+  font-weight: bold;
+}
+
+button {
+  font-family: var(--montserrat);
+}
+
+/* Se repete em diferentes páginas */
+.bg-gradiente1 {
+  position: absolute;
+  top: 4vw;
+  right: -37vw;
+  height: 60vw;
+  border-radius: 5px;
+  transform: rotate(23.5deg);
+}
+
+.bg-gradiente2 {
+  position: absolute;
+  top: 55vw;
+  left: -5vw;
+  height: 60vw;
+  border-radius: 5px;
+  transform: rotate(23.5deg);
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 9;
+}
+
+.logo {
+  position: absolute;
+  top: 130vw;
+  left: 14vw;
+}
+
+.navbar .logo {
+  position: absolute;
+  top: 1vw;
+  left: 14vw;
+}
+
+.navbar .nav-items {
+  position: inherit;
+  top: 1vw;
+  right: 14vw;
+}
+
+.btn {
+  margin: 0 15px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.btn:hover {
+  box-shadow: var(--sombra-media);
+}
+
+.btn-color-white:hover {
+  background-color: var(--cinza-principal);
+}
+
+.btn-color-green {
+  padding: 8px 35px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--verde-principal);
+}
+
+.btn-color-green:hover {
+  color: #fff;
+  background-color: var(--verde-hover);
+}
+
+.underline {
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.2rem;
+}
+
+/* - - - - - - - - - - */
+
+/* pagina home > */
+.slogan {
+  position: absolute;
+  height: auto;
+  width: 25vw;
+  top: 12vw;
+  left: 14vw;
+  font-family: var(--montserrat);
+  color: #000;
+}
+
+.slogan h1 {
+  font-size: 2.5vw;
+  font-weight: 700;
+  line-height: 3.125vw;
+}
+
+.slogan h2 {
+  font-size: 1.25vw;
+  font-weight: 600;
+  line-height: 1.5vw;
+}
+
+.missao {
+  position: absolute;
+  width: 18vw;
+  top: 62vw;
+  left: 14vw;
+  font-size: 1vw;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 0px 25px rgba(0, 0, 0, .4);
+}
+
+.visao {
+  position: absolute;
+  width: 20vw;
+  top: 74vw;
+  left: 39.5vw;
+  font-size: 1vw;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 0px 25px rgba(0, 0, 0, .4);
+}
+
+.valores {
+  position: absolute;
+  width: 18vw;
+  top: 86vw;
+  right: 14vw;
+  font-size: 1vw;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 0px 25px rgba(0, 0, 0, .4);
+}
+
+.missao svg,
+.visao svg,
+.valores svg {
+  height: 6vw;
+  fill: #fff;
+}
+
+/* < página home */
+
+/* página de login e cadastro > */
+.login-cadastro {
+  width: 380px;
+  margin: auto;
+  margin-top: 12vw;
+  padding: 40px 40px 60px 40px;
+  border-radius: 10px;
+  box-shadow: var(--sombra-fraca);
+}
+
+.login-cadastro input {
+  width: 100%;
+  height: 60px;
+  margin: 0;
+}
+
+.login-cadastro h1 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.login-cadastro .field {
+  width: 360px;
+  height: 40px;
+  margin: 5px 0 20px 0;
+  padding: 0 10px 0 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--cinza-principal);
+  font-size: 12px;
+}
+
+/* < página de login e cadastro */
+
+/* sobre nós > */
+.sobreNos {
+  position: absolute;
+  height: 130vw;
+  width: 35vw;
+  left: 31.5vw;
+  padding: 10vw 1vw 10vw 1vw;
+  text-align: center;
+}
+
+.logoSN {
+  display: block;
+  width: 14vw;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
+
+.anzen {
+  margin: 0 0 2.6vw 0;
+  font-size: 3.9vw;
+  font-weight: 600;
+}
+
+.doAlemao {
+  margin: 0;
+  font-size: 0.9vw;
+  font-weight: 500;
+}
+
+.finanzen {
+  margin: 0 0 2vw 0;
+  font-size: 3.1vw;
+  font-weight: 400;
+}
+
+.doPortugues {
+  margin: 0;
+  font-size: 0.9vw;
+  font-weight: 500;
+}
+
+.financas {
+  margin: 0 0 10vw 0;
+  font-size: 3.28vw;
+  font-weight: 400;
+}
+
+.situacaoProblema {
+  margin-top: 20vw;
+  font-weight: 700;
+}
+
+.justificativa {
+  margin-top: 8vw;
+  font-weight: 700;
+}
+
+.metodologia {
+  margin-top: 20vw;
+  font-weight: 700;
+}
+
+.bg-SN1 {
+  width: 60vw;
+  top: 58vh;
+  left: -46vw;
+}
+
+.bg-SN2 {
+  height: 70vw;
+  width: 60vw;
+  top: 112vh;
+  left: 86vw;
+}
+
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.flex-box>div {
+  width: 6vw;
+  margin: 10px 2.83vw;
+  padding: auto;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* < sobre nós */
+
+/* página principal > */
+.principal {
+  position: absolute;
+  right: 14vw;
+  left: 14vw;
+}
+
+.principal input {
+  height: 30px;
+  width: 80%;
+  margin: 10px 0 25px 0;
+  padding: 0 10px 0 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--cinza-principal);
+  font-family: var(--ubuntu);
+  font-weight: 600;
+}
+
+.noMargin {
+  margin: 10px 0 0 0 !important;
+}
+
+.principal label {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0 65px 0 !important;
+}
+
+.flex-box-main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3.5vw;
+  margin-bottom: 40px;
+}
+
+.flex-box-main>div {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.flex-group-0 {
+  width: 22vw;
+}
+
+.valorGrande {
+  font-family: var(--ubuntu);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 6px;
+}
+
+.flex-group-1 {
+  width: 14vw;
+  margin-left: 4vw;
+  padding: 15px 0 0 0;
+}
+
+.flex-group-2 {
+  width: 14vw;
+  margin-left: 2vw;
+  padding: 15px 0 0 0;
+}
+
+.flex-group-3 {
+  width: 14vw;
+  margin-left: 2vw;
+  padding: 15px 0 0 0;
+}
+
+.flex-input-button {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin: 10px 0 0 0;
+}
+
+.more-less {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--verde-principal);
+  color: #fff;
+}
+
+.more-less:hover {
+  background-color: var(--verde-hover);
+  box-shadow: var(--sombra-media);
+}
+
+.flex-group-3 input {
+  width: 90%;
+  margin: 0;
+}
+
+.btn-adicionar {
+  width: 14vw;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: var(--sombra-fraca);
+}
+
+td,
+th {
+  padding: 10px 30px;
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  background-color: var(--cinza-principal);
+}
+
+.footer-principal {
+  text-align: center;
+}
+
+.totalGasto {
+  margin: 30px;
+  font-family: var(--ubuntu);
+  font-weight: 400;
+}
+
+.totalGasto strong {
+  font-family: var(--ubuntu);
+  font-weight: 600;
+}
+
+/* < página principal */
