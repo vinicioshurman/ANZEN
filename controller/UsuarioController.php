@@ -1,13 +1,21 @@
 <?php
-require_once './model/Usuario.php';
+require_once 'model/Usuario.php';
 
 class UsuarioController{
-    public static function salvar(){
+    public static function cadastro(){
        
         $usuario = new Usuario();
         $usuario->setLogin($_POST['login']);
-        $usuario->setSenha($_POST['senha1']);
+        $usuario->setSenha($_POST['senha']);
         $usuario->save();
+    }
+    public static function logar()
+    {
+        $usuario= new Usuario();
+        $usuario->setLogin($_POST['login']);
+        $usuario->setSenha($_POST['senha']);
+
+        return $usuario->logar();
     }
 
     public static function editar($id){
