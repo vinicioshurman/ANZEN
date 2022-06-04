@@ -1,6 +1,6 @@
 <body>
     <nav class="navbar">
-        <a class="logo" href="index.php?action=inicio">
+        <a class="logo" href="index.php">
           <img src="img/logoTEXT.png" alt="logo_anzen" height="30" />
         </a>
         <div class="nav-items">

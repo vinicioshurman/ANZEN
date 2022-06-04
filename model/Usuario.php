@@ -2,12 +2,13 @@
 require_once 'Banco.php';
 require_once 'Conexao.php';
 
-class Usuario extends Banco{
+class Usuario extends Banco
+{
 
     private $id;
-    private $login;
+    private $usuario;
+    private $email;
     private $senha;
-    private $permissao;
 
     public function getId()
     {
@@ -19,16 +20,26 @@ class Usuario extends Banco{
         $this->id = $id;
     }
 
-    public function getLogin()
+    public function getUsuario()
     {
-        return $this->login;
+        return $this->usuario;
     }
 
-    public function setLogin($login)
+    public function setUsuario($usuario)
     {
-        $this->login = $login;
-
+        $this->usuario = $usuario;
     }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
     public function getSenha()
     {
         return $this->senha;
@@ -39,91 +50,83 @@ class Usuario extends Banco{
         $this->senha = md5($senha);
     }
 
-    public function getPermissao()
+    public function save()
     {
-        return $this->permissao;
-    }
-
-    public function setPermissao($permissao)
-    {
-        $this->permissao = $permissao;
-    }
-
-    public function save(){
         $result = false;
         $conexao = new Conexao();
 
-        if($conn = $conexao->getConection()){
-            if($this->id > 0){
-                $query = "UPDATE usuario SET login = :login, senha = :senha, permissao = :permissao WHERE id = :id";
-               
+        if ($conn = $conexao->getConection()) {
+            if ($this->id > 0) {
+                $query = "UPDATE usuario SET nome = :usuario, email = :email, senha = :senha WHERE id_usuario = :id";
+
                 $stmt = $conn->prepare($query);
 
-                if($stmt->execute(array(':login' => $this->login, ':senha' => $this->senha, ':permissao' => $this->permissao, ':id' => $this->id))){
+                if ($stmt->execute(array(':usuario' => $this->usuario, ':email' => $this->email, ':senha' => $this->senha, ':id' => $this->id_usuario))) {
+                    $result = $stmt->rowCount();
+                }
+            } else {
+                $query  = "insert into usuario (id_usuario, nome, email, senha) values (null,:usuario ,:email, :senha)";
+
+                $stmt = $conn->prepare($query);
+
+                if ($stmt->execute(array(
+                    ':usuario'=> $this->usuario,
+                    ':email' => $this->email,
+                    ':senha' => $this->senha
+                ))) {
                     $result = $stmt->rowCount();
                 }
             }
-        else{
-             $query  = "insert into usuario (id, login, senha, permissao) values (null, :login, :senha, :permissao)";
-         
-            $stmt = $conn->prepare($query);
-
-            if($stmt->execute(array(':login'=> $this->login, 
-                                    ':senha'=> $this->senha, 
-                                    ':permissao'=> $this->permissao 
-                                        ))){
-                                            $result = $stmt->rowCount();
-            }
         }
-    }
 
         return $result;
     }
-        
-    
 
-    public function remove($id){
-        $result= false;
-        $conexao= new Conexao();
-        $conn = $conexao -> getConection();
+    public function remove($id)
+    {
+        $result = false;
+        $conexao = new Conexao();
+        $conn = $conexao->getConection();
         $query = "DELETE FROM usuario where id = :id";
-        $stmt = $conn -> prepare($query);
-        if($stmt-> execute(array(':id' => $id))){
-            $result= true;
-        } 
+        $stmt = $conn->prepare($query);
+        if ($stmt->execute(array(':id' => $id))) {
+            $result = true;
+        }
         return $result;
     }
 
-    public function find($id){
+    public function find($id)
+    {
         $conexao = new Conexao;
         $conn = $conexao->getConection();
         $query = "SELECT * FROM usuario WHERE id = :id";
         $stmt = $conn->prepare($query);
 
-        if($stmt->execute(array(':id' => $id))){
-            if($stmt->rowCount() > 0){
+        if ($stmt->execute(array(':id' => $id))) {
+            if ($stmt->rowCount() > 0) {
                 $result = $stmt->fetchObject(Usuario::class);
-            }else{
+            } else {
                 $result = false;
             }
         }
         return $result;
     }
 
-    public function count(){
-
+    public function count()
+    {
     }
 
-    public function listAll(){
+    public function listAll()
+    {
         $conexao = new Conexao();
         $conn = $conexao->getConection();
         $query = "SELECT * FROM usuario";
         $stmt = $conn->prepare($query);
         $result = array();
 
-        if($stmt->execute()) {
-            while($rs = $stmt->fetchObject(Usuario::class)) {
-                $result [] = $rs;
+        if ($stmt->execute()) {
+            while ($rs = $stmt->fetchObject(Usuario::class)) {
+                $result[] = $rs;
             }
         } else {
             $result = false;
@@ -131,21 +134,20 @@ class Usuario extends Banco{
         return $result;
     }
 
- public function logar(){
-        $conexao= new Conexao();
-        $conn= $conexao->getConection();
-        $query= "SELECT * FROM usuario where login = :login and senha = : senha";
+    public function logar()
+    {
+        $conexao = new Conexao();
+        $conn = $conexao->getConection();
+        $query = "SELECT * FROM usuario where nome = :usuario and senha = :senha";
         $stmt = $conn->prepare($query);
-        if($stmt->execute(array(':login'=> $this->login, ':senha'=> $this->senha))){
-         if($stmt->rowCount()>0){
-            $result = true; 
-        }else{
-            $result = false;
+        if ($stmt->execute(array(':usuario' => $this->usuario, ':senha' => $this->senha))) {
+            if ($stmt->rowCount() > 0) {
+                $result = true;
+            } else {
+                $result = false;
+            }
         }
+        return $result;
     }
-    return $result;
-}
 
 }
-
-?>
